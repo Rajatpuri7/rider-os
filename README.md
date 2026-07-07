@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.svg" width="150" alt="RIDER logo — a folder branded with a horseshoe"/></p>
+
 # RIDER
 
 **An operating system for engineering projects, where the AI is only the execution engine.**
