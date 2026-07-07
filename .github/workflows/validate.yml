@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Structure validator (must be clean)
+        run: python rider-master/ops/validate.py
+      - name: Doctor smoke test (empty manifest exits 0)
+        run: python rider-master/ops/doctor.py
+      - name: Bundle smoke test (all modes build)
+        shell: bash
+        run: |
+          for mode in core task plan decide research debug review; do
+            python rider-master/ops/bundle.py "$mode" --out /tmp/pack-$mode.txt
+          done
