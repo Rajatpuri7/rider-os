@@ -1,0 +1,32 @@
+name: Bug report
+description: A defect in the ops scripts, a broken kernel reference, or a protocol step a model reliably misreads
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - ops scripts (validate.py / doctor.py / bundle.py)
+        - kernel (protocols, laws, templates, playbooks)
+        - documentation
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: For script bugs, paste the command and full output. For kernel issues, name the file, the step, and which model misread it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "e.g. Windows 11, Python 3.12, Claude Code 2.x / Gemini CLI"

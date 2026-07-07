@@ -1,0 +1,30 @@
+# ENVIRONMENT.yaml — single source of truth for the project toolchain (LAW L7)
+# Filled by P11-ENVIRONMENT. Checked mechanically by `python ops/doctor.py`.
+#
+# Schema per tool entry:
+#   name:         human name
+#   why:          one line — which subsystem/domain needs it
+#   check:        shell command that exits 0 if present (doctor runs this)
+#   version_cmd:  command printing the version        (optional)
+#   min_version:  lowest acceptable, as "X.Y"          (optional)
+#   install:      { windows: "...", macos: "...", linux: "..." }  (commands or URL)
+#   required:     true|false  (false = nice-to-have; doctor warns, doesn't fail)
+
+tools: []
+  # - name: python
+  #   why: ops scripts + analysis stack
+  #   check: python --version
+  #   version_cmd: python --version
+  #   min_version: "3.10"
+  #   install: { windows: "winget install Python.Python.3.12", macos: "brew install python", linux: "apt install python3" }
+  #   required: true
+
+python_packages: []      # [{name: numpy, min_version: "1.24", why: "..."}] — doctor checks import + version
+
+# No check command possible — doctor prints these as HUMAN-VERIFY reminders:
+ide_extensions: []       # [{ide: vscode, id: ms-python.python, why: "..."}]
+mcp_servers: []          # [{name: ..., config_hint: ..., why: "..."}]
+manual_items: []         # drivers, licenses, accounts, physical tools — [{name: ..., how_to_verify: ..., why: "..."}]
+
+# Quirks a fresh machine trips over → write a note in env/setup/ and list it here:
+setup_notes: []          # ["setup/flash-procedure.md", ...]

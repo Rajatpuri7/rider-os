@@ -1,0 +1,24 @@
+name: Feature request
+description: A new protocol, playbook, template, or ops capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem it solves
+      description: Kernel changes need a driving lesson, not speculation. What concretely went wrong (or was missing) in a real project?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: checkboxes
+    id: antibloat
+    attributes:
+      label: Anti-bloat check
+      options:
+        - label: This pays rent on every project, not just mine (else it belongs in a project's knowledge/, not the kernel)
+          required: true

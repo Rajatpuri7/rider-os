@@ -1,0 +1,25 @@
+name: Failure mode / countermeasure
+description: You watched an AI model ruin work in a reproducible way and have a countermeasure — the highest-value contribution
+labels: [failure-mode]
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: The failure
+      description: What did the model do wrong? Which model(s)? How reproducible?
+    validations:
+      required: true
+  - type: textarea
+    id: smell
+    attributes:
+      label: The smell
+      description: How does this failure look from the outside, early enough to catch?
+    validations:
+      required: true
+  - type: textarea
+    id: countermeasure
+    attributes:
+      label: The countermeasure
+      description: What rule, protocol step, or checklist item prevents it? Have you tested that it actually works on a real model?
+    validations:
+      required: true

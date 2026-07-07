@@ -1,0 +1,20 @@
+# RIDER default ignores — tune per project during P01.
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Large binary evidence should be committed selectively; raw dumps often not.
+# verification/evidence/**/*.mp4
+
+# Never ignore state or knowledge — they ARE the project.
+!state/
+!knowledge/

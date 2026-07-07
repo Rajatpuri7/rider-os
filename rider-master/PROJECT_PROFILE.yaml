@@ -1,0 +1,34 @@
+# PROJECT_PROFILE.yaml — machine-readable project identity.
+# Filled in by P01-INITIALIZE. Read by every boot. Keep it truthful.
+
+status: uninitialized          # uninitialized | active | paused | delivered | archived
+name: ""
+one_liner: ""                  # what this project is, in one sentence
+created: ""                    # YYYY-MM-DD
+owner: ""
+
+# Domains: set true for every domain that applies. Each true domain OBLIGATES
+# reading kernel/playbooks/<domain>.md during boot for related work.
+domains:
+  software: false
+  embedded-firmware: false
+  electronics: false
+  mechanical-cad: false
+  control-systems: false
+  computer-vision: false
+  machine-learning: false
+  robotics-autonomy: false
+  simulation: false
+  research-academic: false
+  safety-reliability: false    # set true if failure can damage hardware or people
+
+# Environment lives in ONE place (LAW L7): env/ENVIRONMENT.yaml — the manifest
+# P11-ENVIRONMENT fills it and ops/doctor.py checks it. Do not list tools here.
+environment_manifest: env/ENVIRONMENT.yaml
+
+# Hard constraints that no plan may violate. Examples: budget, deadline,
+# supply voltage limits, MCU flash size, competition rules, thesis deadline.
+constraints: []
+
+# Definition of overall project success — measurable, checkable.
+success_criteria: []

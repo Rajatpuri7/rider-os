@@ -1,0 +1,7 @@
+# Repo-level ignores. The template ships its own .gitignore in rider-master/.
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
