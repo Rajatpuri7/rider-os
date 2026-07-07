@@ -15,10 +15,12 @@ model into it and it plans before building, cites evidence before claiming,
 verifies before declaring done, and picks up exactly where it left off, even
 months later.
 
-> **The horse and the rider.** A frontier model in an empty folder is a fast horse
-> with no rider: it forgets, fabricates, skips verification, and sprawls. RIDER is
-> the rider — it doesn't make the horse faster, it makes every horse run the
-> right race.
+> **The horse and the rider.** Think of the AI model as a horse and this folder
+> architecture as the rider who knows exactly how to ride it — getting the
+> maximum potential out of whatever horse it's given. Or in Formula 1 terms:
+> RIDER is Max Verstappen and the AI is the car — no matter which car you hand
+> him, he drives it to its fullest potential. RIDER doesn't make the model
+> smarter; it makes any model perform at its limit.
 
 ---
 
@@ -67,30 +69,52 @@ Three mechanisms do the heavy lifting:
 
 ## Quick start (5 minutes)
 
-```bash
-# 1. Get the template
-git clone https://github.com/Rajatpuri7/rider-os.git
-cp -r rider-os/rider-master my-drone-project && cd my-drone-project
+You don't install RIDER — it's a folder you copy. One copy per project.
 
-# 2. Dump everything you have into the inbox — don't organize anything
-cp ~/Downloads/datasheet.pdf ~/notes.md intake/inbox/
+**Step 1 — Get the template** (pick either)
 
-# 3. Open the folder with any AI agent and say:
-#    "Initialize this project."
-```
+- Click the green **"Use this template"** button on GitHub, or
+- ```bash
+  git clone https://github.com/Rajatpuri7/rider-os.git
+  cp -r rider-os/rider-master my-project     # Windows: xcopy /E /I rider-os\rider-master my-project
+  ```
 
-That's the whole workflow. The agent reads its entry file
-([CLAUDE.md](rider-master/CLAUDE.md) / [AGENTS.md](rider-master/AGENTS.md) /
-[GEMINI.md](rider-master/GEMINI.md)), interviews you, classifies your files,
-derives the toolchain, and sets up state. From then on, open the folder and
-describe what you want — the system routes the rest.
+Your project = the copied `rider-master` folder, renamed to anything you like.
+
+**Step 2 — Dump your files in.** Drag every file you have — papers, datasheets,
+CAD, code, notes, images, requirements — into `my-project/intake/inbox/`.
+**Don't organize anything yourself.** Sorting them is the AI's job.
+
+**Step 3 — Open the folder with any AI agent and say:**
+
+> *"Initialize this project."*
+
+The agent reads its entry file ([CLAUDE.md](rider-master/CLAUDE.md) /
+[AGENTS.md](rider-master/AGENTS.md) / [GEMINI.md](rider-master/GEMINI.md))
+automatically, interviews you about the project, classifies your inbox files,
+detects the tools you need, and sets up the project state.
+
+**Step 4 — Just talk.** From now on, open the folder and describe what you
+want in plain language — no commands or protocol names to learn:
+
+| You say | The system runs |
+|---|---|
+| "Give me a status briefing" | boot + summary of state, risks, open questions |
+| "Plan the perception module" | planning protocol with gated task breakdown |
+| "Work on the active task" | disciplined execution loop |
+| "Why is the sensor reading garbage?" | hypothesis-driven debugging |
+| "Should we use CAN or UART here?" | trade study + recorded decision |
+| "End session" | logs written, state saved for next time |
+
+Come back tomorrow — or in six months, with a different AI — and it resumes
+exactly where you left off, because all memory lives in the files.
 
 **No agent with file access?** Web-only ChatGPT/Gemini work too:
 `python ops/bundle.py` generates a paste-able context pack. See
 [kernel/PROMPTS.md](rider-master/kernel/PROMPTS.md).
 
-**Requirements:** Python 3.8+ for the three optional `ops/` scripts (stdlib only,
-zero dependencies). The directory itself works with no installation at all.
+**Requirements:** none. Optionally Python 3.8+ for the three `ops/` helper
+scripts (stdlib only, zero dependencies).
 
 ## What's inside
 
