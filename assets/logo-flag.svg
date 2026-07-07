@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Variation: checkered-flag folder — every project driven to the finish line.
+       Inspiration: pattern-as-identity marks (Vercel/Vite geometric family). -->
+  <rect width="512" height="512" rx="100" fill="#0F172A"/>
+  <path d="M114,156 h86 l34,34 h164 c14.4,0 26,11.6 26,26 v160 c0,14.4 -11.6,26 -26,26 H114 c-14.4,0 -26,-11.6 -26,-26 V182 c0,-14.4 11.6,-26 26,-26 Z"
+        fill="#F59E0B"/>
+  <!-- checkered band across the folder -->
+  <g fill="#0F172A">
+    <rect x="100" y="264" width="28" height="28"/>
+    <rect x="156" y="264" width="28" height="28"/>
+    <rect x="212" y="264" width="28" height="28"/>
+    <rect x="268" y="264" width="28" height="28"/>
+    <rect x="324" y="264" width="28" height="28"/>
+    <rect x="380" y="264" width="28" height="28"/>
+    <rect x="128" y="292" width="28" height="28"/>
+    <rect x="184" y="292" width="28" height="28"/>
+    <rect x="240" y="292" width="28" height="28"/>
+    <rect x="296" y="292" width="28" height="28"/>
+    <rect x="352" y="292" width="28" height="28"/>
+    <rect x="408" y="292" width="16" height="28"/>
+  </g>
+</svg>

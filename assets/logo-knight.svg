@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Variation: chess-knight on the folder — the horse lives in the folder.
+       Inspiration: mascot-on-mark logos (GitHub Octocat, Homebrew). -->
+  <rect width="512" height="512" rx="100" fill="#0F172A"/>
+  <path d="M114,156 h86 l34,34 h164 c14.4,0 26,11.6 26,26 v160 c0,14.4 -11.6,26 -26,26 H114 c-14.4,0 -26,-11.6 -26,-26 V182 c0,-14.4 11.6,-26 26,-26 Z"
+        fill="#F59E0B"/>
+  <!-- knight head, dark on amber -->
+  <path d="M310,368 L310,262 C310,230 298,206 272,194 L262,164 L248,188
+           C222,192 204,212 196,240 L180,268 C176,276 182,284 190,282
+           L222,272 C232,269 238,262 246,258 C236,282 222,294 216,318
+           C210,342 222,350 226,368 Z" fill="#0F172A"/>
+  <circle cx="252" cy="226" r="7" fill="#F59E0B"/>
+  <rect x="198" y="368" width="120" height="16" rx="8" fill="#0F172A"/>
+</svg>
