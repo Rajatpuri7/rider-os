@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/logo-knight.svg" width="150" alt="RIDER logo — a chess knight on a folder"/></p>
+<p align="center"><img src="assets/logo.svg" width="150" alt="RIDER logo — a chess knight inside a folder"/></p>
 
 # RIDER
 
